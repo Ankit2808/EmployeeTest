@@ -1,0 +1,26 @@
+State Table :
+          StateId int PK AI
+          StateName nvarchar(50)
+          
+Department Table :
+          DepartmentId int PK AI
+          DepartmentName nvarchar(50)
+          DepartmentCode nvarchar(10)
+          
+City Table :
+          CityId  int PK  AI
+          CityName  nvarchar(50)
+          FkStateId int FK(StateId)
+          
+Employee Table :
+          EmployeeId  int PK AI,
+          FirstName nvarchar(50),
+          LastName nvarchar(50),
+          BirthDate DateTime,
+          Gender nvarchar(50),
+          Salary nvarchar(50),
+          FkCityId int FK(CityId),
+          FkStateId int FK(StateId),
+          FkDepartmentId int FK(DepartmentId),
+          Photo nvarchar(500),
+          IsActive bit
